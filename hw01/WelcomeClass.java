@@ -9,9 +9,9 @@ public class WelcomeClass {
 public static void main(String[] args) {
     
 //welcome message, lehigh ID and autobiographic statement
-    System.out.println("   -----------");
-    System.out.println("   | WELCOME |");
-    System.out.println("   -----------");
+    System.out.println("    -----------");
+    System.out.println("    | WELCOME |");
+    System.out.println("    -----------");
     System.out.println("  ^  ^  ^  ^  ^  ^");
     System.out.println(" / \\/ \\/ \\/ \\/ \\/ \\");
     System.out.println("|-J--U--S--2--1--9-|");
