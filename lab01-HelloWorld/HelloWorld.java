@@ -1,4 +1,5 @@
 //Eddie Sohn
+//Date : 2015 Aug 28
 //lab 1
 //Hello World Java Program
 //
