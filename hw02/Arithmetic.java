@@ -53,7 +53,7 @@ public static void main(String[] args) {
     System.out.println(nGlasses + "               Glass       " + totalGlassCost$);
     System.out.println(nEnvelopes + "               Envelope    " + totalEnvelopeCost$);
     System.out.println("");
-    System.out.println("Subtotal " + (totalSockCost$+totalGlassCost$+totalEnvelopeCost$) + " $");
+    System.out.println("Subtotal " + totalCost$ + " $");
     System.out.println("Tax " + Math.round(totalTax*100)/100.0 + " $");
     System.out.println("Total " + Math.round((totalCost$+totalTax)*100)/100.0 + " $");
     
