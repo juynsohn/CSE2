@@ -7,6 +7,7 @@ Purpose : Compute current time, dinner time and amount of time remaining until d
           (Use 24-hour and int) 
 */
 
+//import scanner
 import java.util.Scanner;
 
 //define class
@@ -28,21 +29,29 @@ public class Timer {
         int dinnerTime = myScanner.nextInt();
         
         //Declare variables
-        int minuteRemaining;
-        int hourRemaining;
-        double curInMinute;
-        double dinInMinute;
-        double timeRemaining;
+        int minuteRemaining; //Minute remaining until dinner
+        int hourRemaining; //Hour remaining until dinner
+        double curInMinute; //Current time in Minutes, In 'Hour*60 + minutes' (e.g. 13:10 = 13*60 + 10 = 790 minutes)
+        double dinInMinute; //Dinner time in Minutes, In 'Hour*60 + minutes' (e.g. 18:00 = 18*60 = 1080 minutes)
+        double timeRemaining; //Time remaining until dinner in Minutes
         
-        curInMinute = Math.floor(currentTime/100)*60 + (currentTime % 100); //Convert current time in minute
-        dinInMinute = Math.floor(dinnerTime/100)*60 + (dinnerTime % 100); //Convert dinner time in minute
+        curInMinute = Math.floor(currentTime/100)*60 + (currentTime % 100); //Convert current time to minute
+        dinInMinute = Math.floor(dinnerTime/100)*60 + (dinnerTime % 100); //Convert dinner time to minute
         timeRemaining = dinInMinute - curInMinute; //Time remaining until dinner in minute
         
         hourRemaining = (int) Math.floor(timeRemaining/60); //Hours remaining until dinner
-        minuteRemaining = (int) timeRemaining % 60; //Minutes remaining until dinne
+        minuteRemaining = (int) timeRemaining % 60; //Minutes remaining until dinner
         
-        System.out.println("You have " + hourRemaining + " hours and " + minuteRemaining + " minutes until dinner.");
+        System.out.println("You have " + hourRemaining + " hour(s) and " + minuteRemaining + " minute(s) until dinner.");
         
+        /*
+        I converted dinner time and current time into minutes then calculated the difference
+        in order to make 60 minutes = 1 hour. 
+        To get remaining hour, I divided total time remaining (in minutes) by 60 and used 
+        Math.floor() function in order to get hour. 
+        For minutes, I used % to get the remaining minutes.
+        */
+
     }
     
 }
