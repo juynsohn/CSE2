@@ -20,6 +20,8 @@ public class pyramid {
         System.out.println("What size (line) of pyramid do you want to generate ? ");
         int pyramidSize = myScanner.nextInt();
         
+        //In order to make the pyramid symmetrical, number of * must be odd.
+        
         for (int a = 0; a < pyramidSize; a++) {
             
             for (int b = 1; b < pyramidSize - a; b++) {
